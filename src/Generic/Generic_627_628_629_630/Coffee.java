@@ -1,4 +1,4 @@
-package Generic.Generic_627;
+package Generic.Generic_627_628_629_630;
 
 /**
  *
@@ -6,6 +6,9 @@ package Generic.Generic_627;
 public class Coffee {
     private static long counter = 0;
     private final long id = counter++;
+
+    public Coffee() {
+    }
 
     @Override
     public String toString() {
