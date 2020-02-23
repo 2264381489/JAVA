@@ -6,6 +6,8 @@ import Generic.TwoTuple;
  * 639号代码。泛型化就是参数化，方法头加上了泛型，就叫做参数化。return中的返回类型会被方法头上的返回类型，向上转型。也正是如此，f2（）没有跳出警告
  */
 import static Generic.Generic639.Tuple.tuple;
+import static java.lang.Float.parseFloat;
+import static java.lang.Integer.parseInt;
 
 public class TupleTest {
 //    Tuple tuple=new Tuple();
