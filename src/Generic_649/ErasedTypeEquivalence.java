@@ -3,6 +3,7 @@ package Generic_649;
 import java.util.ArrayList;
 
 /**
+ * 649
  * 你会发现，原本应该不同的内容，现在竟然完全相同了。
  * 很重要的原因就在于泛型在运行的时候产生的特殊机制，
  * 擦除机制
