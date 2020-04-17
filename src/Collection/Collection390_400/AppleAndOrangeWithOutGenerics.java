@@ -33,7 +33,7 @@ public class AppleAndOrangeWithOutGenerics {
 //            for (int j = 0; j <apples.size() ; j++) {
 //                System.out.println(((Apple)apples.get(j)).id());//如果没有泛型的拦截,输入Orange类型根本不会被发现.非常的危险
 //            }
-//
+
         /**
          * 使用泛型
          */
