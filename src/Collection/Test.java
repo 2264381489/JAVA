@@ -15,7 +15,6 @@ int a=0;
     public static void  display(Collection<?> a){
         int b=0;
         System.out.println(a);
-Arrays.toString()
     }
 
     public static void main(String[] args) {
