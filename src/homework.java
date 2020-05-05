@@ -64,3 +64,44 @@ class Solution {
 
     }
 }
+class Solution {
+    public int evalRPN(String[] tokens) {
+        //栈用来存放节点
+        LinkedList<Integer> list=new LinkedList<>();
+        for(String a:tokens){
+            int pre=0;
+            int last=0;
+            int total=0;
+            switch(a){
+                case "+" :
+                    pre=list.removeFirst();
+                    last=list.removeFirst();
+                    total=pre+last;
+                    list.addFirst(total);
+                    break;
+                case "-":
+                    pre=list.removeFirst();
+                    last=list.removeFirst();
+                    total=pre-last;
+                    list.addFirst(total);
+                    break;
+                case "*":
+                    pre=list.removeFirst();
+                    last=list.removeFirst();
+                    total=pre*last;
+                    list.addFirst(total);
+                    break;
+                case "/":
+                    pre=list.removeFirst();
+                    last=list.removeFirst();
+                    total=pre/last;
+                    list.addFirst(total);
+                    break;
+                default :
+                    list.addFirst(Integer.valueOf(a));
+                    break;
+            }
+        }
+        return list.poll();
+    }
+}
