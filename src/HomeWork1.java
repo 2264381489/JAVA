@@ -1,3 +1,5 @@
+import java.util.LinkedList;
+
 public class HomeWork1    {
 }
 class Solution {
@@ -41,5 +43,42 @@ class Solution {
     public static void main(String[] args) {
         Solution solution = new Solution();
         solution.maxProduct(new int[]{-4,-3,-2});
+    }
+}
+class Solution1 {
+    public static int longestWPI(int[] hours) {
+//建立一个栈
+        LinkedList<Integer> Stack=new LinkedList<>();
+        int i=0;
+        while(hours[i]<8){
+            i++;
+        }
+        //  Stack.addFirst(-1);
+        //维护一个数组,保存各个位置上的字符串
+        //将数组中数据加入其中
+        int size=0;//长度
+        int max=0;//最大的长度
+        for(;i<hours.length;i++){
+            //大于8入栈,小于等于8出栈
+            if(hours[i]>8){
+                Stack.addFirst(hours[i]);
+                size++;
+            }else{
+                //如果栈为空  如果同长度 下一个是>8的数则可以继续,如果下一个是小于8的数,则清空数组
+                if(Stack.isEmpty()){
+                    max=Math.max(max,size);
+                    size=0;
+                    continue;
+                }
+                Stack.removeFirst();
+                size++;
+            }
+        }
+        //  Stack.addLast(hours[])
+        return size-1;
+    }
+
+    public static void main(String[] args) {
+        Solution1.longestWPI(new int[]{9,9,6,0,6,6,9});
     }
 }
