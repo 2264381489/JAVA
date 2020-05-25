@@ -1,3 +1,6 @@
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.InputStream;
 import java.util.LinkedList;
 
 public class HomeWork1    {
@@ -81,4 +84,15 @@ class Solution1 {
     public static void main(String[] args) {
         Solution1.longestWPI(new int[]{9,9,6,0,6,6,9});
     }
+}
+class homework{
+
+
+
+
+
+
+
+
+
 }
